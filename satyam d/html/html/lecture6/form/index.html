@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form</title>
+  </head>
+  <body>
+    <h1>Forms</h1>
+    <div>
+      <form action="welcomepage.html" target="_blank">
+        <fieldset>
+<legend>
+  Enter your basic detail
+</legend>
+ 
+        <label for="Full name :">full name :</label>
+        <input
+          type="name"
+          id="Full name "
+          placeholder=" Enter full name"
+          required
+        />
+        <br />
+        <br />
+
+        <label for="email name :">email name :</label>
+        <input
+          type="email"
+          id="email "
+          placeholder="Enter your email"
+          required
+        />
+        <br />
+        <br />
+        <label for="password :"> password :</label>
+        <input
+          type="password"
+          id="pass"
+          placeholder="Enter your password"
+          required
+        />
+        <br />
+        <br />
+        <label for=" checkbox:"> are you 18+ ? </label>
+        <input type="checkbox" id="chekbox" required />
+        <br />
+        <br />
+        <label for=" phone no"> enter your phone number : </label>
+        <input
+          type="phone"
+          id="phone no"
+          required
+          minlength="10"
+          min="0"
+          maxlength="10"
+        />
+        <br />
+        <br />
+        <label for="gender"> Gender: </label>
+        <label for="male"> male </label>
+        <input type="radio" id="male" name="gender" required />
+        <label for="female"> female </label>
+        <input type="radio" id="female" name="gender" required />
+        <br />
+        <br />
+        <label for="dob"> enter your DOB : </label>
+        <input type="date" id="dob" required />
+        <br />
+        <br />
+        <label for="file"> Upload photos : </label>
+        <input type="file" id="file" required />
+        <br />
+        <br />
+        <label for="city"> select your city : </label>
+        <select name="city" id="city">
+          <option value="Delhi">Delhi</option>
+          <option value="mumbai">mumbai</option>
+          <option value="gkp">gkp</option>
+          <option value="kushinagar" selected>kushinagar</option>
+          <option value="pipra">pipra</option>
+        </select>
+
+
+
+        <br />
+        <br />
+
+        <input type="Submit" />
+        <u>
+          <h2>or</h2>
+        </u>
+        <button type="submit">Submit Form</button>
+      </form>
+             </fieldset>
+      <br />
+      <br />
+      <u>placeholder batata hai ki kya type karna hai</u>
+      <h2>selected is use for jisko priority giving</h2>
+      <br />
+      <br />
+      <h2>required is necessary to fill</h2>
+    </div>
+  </body>
+</html>
