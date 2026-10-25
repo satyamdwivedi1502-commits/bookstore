@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html><head><title>Cart</title>
+<style>table{border-collapse:collapse;width:100%}th,td{border:1px solid #888;padding:8px;text-align:center}th{background:#4a2c17;color:#fff}</style></head>
+<body style='font-family:Arial'>
+<h2>Your Shopping Cart</h2>
+<table>
+<tr><th>Book</th><th>Price</th><th>Qty</th><th>Subtotal</th></tr>
+<tr><td>HTML5 Black Book</td><td>499</td><td><input type='number' class='q' data-p='499' value='1' min='1'></td><td class='s'>499</td></tr>
+<tr><td>Eloquent JavaScript</td><td>650</td><td><input type='number' class='q' data-p='650' value='1' min='1'></td><td class='s'>650</td></tr>
+<tr><th colspan='3'>Total</th><th id='t'>1149</th></tr>
+</table><br>
+<button>Checkout</button>
+<script>
+var q=document.getElementsByClassName('q'),s=document.getElementsByClassName('s');
+function calc(){var t=0;for(var i=0;i<q.length;i++){var v=q[i].value*q[i].dataset.p;s[i].innerText=v;t+=v;}document.getElementById('t').innerText=t;}
+for(var i=0;i<q.length;i++){q[i].addEventListener('input',calc);}
+</script>
+</body></html>

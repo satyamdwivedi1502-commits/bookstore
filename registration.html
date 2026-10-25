@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html><head><title>Registration</title></head>
+<body style='font-family:Arial;padding:20px'>
+<h2>Registration Form</h2>
+<form id='reg' action='#' method='post' onsubmit="return validate()">
+Name: <input type='text' id='name' name='name'><br><br>
+Password: <input type='password' id='pass' name='pass'><br><br>
+E-mail: <input type='text' id='email' name='email'><br><br>
+Phone: <input type='text' id='phone' name='phone'><br><br>
+Sex: <input type='radio' name='sex' value='M'> Male
+<input type='radio' name='sex' value='F'> Female
+<input type='radio' name='sex' value='O'> Other<br><br>
+Date of Birth:
+<select id='dd'></select> <select id='mm'></select> <select id='yy'></select><br><br>
+Languages known:
+<input type='checkbox' name='lang' value='English'> English
+<input type='checkbox' name='lang' value='Telugu'> Telugu
+<input type='checkbox' name='lang' value='Hindi'> Hindi
+<input type='checkbox' name='lang' value='Tamil'> Tamil<br><br>
+Address:<br><textarea name='addr' rows='4' cols='35'></textarea><br><br>
+<input type='submit' value='Register'> <input type='reset'>
+</form>
+<script>
+function fill(id,from,to){var s=document.getElementById(id);for(var i=from;i<=to;i++){s.add(new Option(i,i));}}
+fill('dd',1,31);fill('mm',1,12);fill('yy',1980,2010);
+</script>
+<script>
+function validate(){
+ var n=document.getElementById('name').value.trim();
+ var p=document.getElementById('pass').value;
+ var e=document.getElementById('email').value.trim();
+ var ph=document.getElementById('phone').value.trim();
+ if(!/^[A-Za-z ]+$/.test(n)||n.length<6){alert('Invalid name (alphabets, min 6 characters).');return false;}
+ if(p.length<6){alert('Password must be at least 6 characters.');return false;}
+ if(!/^[A-Za-z0-9._-]+@[A-Za-z0-9-]+([.][A-Za-z]{2,})+$/.test(e)){alert('Enter a valid e-mail, e.g. name@domain.com');return false;}
+ if(!/^[0-9]{10}$/.test(ph)){alert('Phone number must contain exactly 10 digits.');return false;}
+ alert('Registration successful!');
+ return true;
+}
+</script>
+</body></html>
